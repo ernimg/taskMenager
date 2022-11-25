@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #trzeba doinstalować
+    'rest_framework',
     'tasks.apps.TasksConfig',
     'django.contrib.admin',
     'django.contrib.auth',
