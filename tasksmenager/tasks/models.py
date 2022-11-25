@@ -13,8 +13,12 @@ class Tasks(models.Model):
     files = models.FileField(upload_to='uploads/')
     URL = models.URLField(blank = True)
     priority = models.CharField(choices = PRIORITY_STATUS ,max_length = 30, default = 'low')
+    def __str__(self):
+        return self.title
+
 
 class Vote(models.Model):
     # Asocjacja
     tasks = models.ForeignKey(Tasks, on_delete = models.CASCADE)
-    usersVote = models.TextField
+    usersVote = models.TextField(blank = True)
+    
